@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Recommendations</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+
+<body>
+    <h1>Recommendations for {{ selected_medicine_name }}</h1>
+    <ul>
+        {% for recommendation in recommendations %}
+        <li>{{ loop.index }}. {{ recommendation }}</li>
+        <a href="https://pharmeasy.in/search/all?name={{ recommendation }}">Purchase {{ recommendation }}</a>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
