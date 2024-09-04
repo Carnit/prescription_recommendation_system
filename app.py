@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle
 import pandas as pd
+from PIL import Image
 
 ## To Add External CSS ##
 with open("css//style.css") as f:
@@ -55,7 +56,7 @@ if st.button("Recommend Medicine"):
         j += 1
 
         ## Image load ##
-from PIL import Image
+
 
 image = Image.open("images/image.png")
 st.image(image, caption="Recommended Medicines")
